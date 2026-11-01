@@ -1,0 +1,2 @@
+import java.security.*;import java.util.*;
+public class SHA1Digest{public static void main(String[]x)throws Exception{Scanner s=new Scanner(System.in);System.out.print("Enter the input text: ");String m=s.nextLine();byte[]d=MessageDigest.getInstance("SHA-1").digest(m.getBytes(java.nio.charset.StandardCharsets.UTF_8));StringBuilder b=new StringBuilder();for(byte q:d)b.append(String.format("%02x",q&255));System.out.println("Original Text: "+m);System.out.println("SHA-1 Digest: "+b);}}
